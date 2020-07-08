@@ -1,38 +1,56 @@
-@extends('admin.admin_dashboard')
+  @extends('admin.admin_dashboard')
 @section('main')
+                          <div class="card mb-4">
+                            <div class="card-header" style="text-align: center;">
+                                <i class="fas fa-table mr-1"></i>
+                                Transaction By User
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                              <th>User Name</th>
+                                              <th>Trasnfer To</th>
+                                              <th>Transfer Ammount</th>
+                                              <th>Transfer Charge</th>
+                                              <th>Transaction Time</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot> -->
 
-<div class="container">
-  <h2>Manage Permission</h2> 
-  <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>       
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Currency Name</th>
-        <th>Trasnfer Charge</th>
-        <th>Reffered Bonus</th>
-        <th>SignUp Bonus</th>
-        <th>Interest Ammount</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-        @foreach ($user as $row)  
-      <tr>
-        <td>{{ $row->user_id }}</td>
-        <td>{{ $row->transfer_charge }} {{ $row->currency_name }}</td>
-        <td>{{ $row->reffered_bouns_ammount }} {{ $row->currency_name }}</td>
-        <td>{{ $row->signup_bonus }} {{ $row->currency_name }}</td>
-        <td>{{ $row->interest_ammount }}%</td>
-        <td>
-          <a href="{{route('editPermission',$row->id)}}" class="btn btn-success">
-                <span class="glyphicon glyphicon-edit">Edit</span></a>
+
+                                        <tbody>
+                                        @foreach ($transactions as $row)
+                                      <tr>
+                                        <td>{{ $row->user->username }}</td>
+                                      <td>{{ $row->transferedUser->username }}</td>
+                                      <td>{{ $row->transfer_ammount }} {{Session::get('currency')}}</td>
+                                      <td>{{ $row->transfer_charge }} {{Session::get('currency')}}</td>
+                                      <td>{{ $row->updated_at->diffForHumans() }}</td>
 
 
-        </td>
-      </tr>
-      @endforeach
-      
-    </tbody>
-  </table>
-</div>
-@endsection
+
+                                      </tr>
+                                      @endforeach
+
+                                    </tbody>
+
+                                        </table>
+                                        </div>
+                                        </div>
+                                        </div>
+                                     @endsection
+
+
+
+

@@ -43,4 +43,14 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Transaction', 'transferred_user_id');
     }
+
+    public function transferedUser()
+    {
+        return $this->belongsTo('App\User', 'transferred_user_id');
+    }
+
+    // public function referedBenifitiarName()
+    // {
+    //     return $this->belongsTo('App\User', 'reffered_id');
+    // }
 }

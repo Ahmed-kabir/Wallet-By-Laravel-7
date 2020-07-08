@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Reffered;
+use App\Transaction;
 use Illuminate\Http\Request;
 use Auth;
 use App\adminSupport;
 use App\User;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -16,7 +19,7 @@ class AdminController extends Controller
     // }
     public function login()
     {
-    
+
        return view('admin.admin_login');
     }
 
@@ -44,9 +47,30 @@ class AdminController extends Controller
 
     public function admin_dashboard()
     {
-        
-        return view('admin.admin_dashboard');
 
+        $settings = adminSupport::first();
+        $currency = $settings->currency_name;
+        session()->put('currency', $currency);
+
+         $data['total_registered_user'] = User::get()->count();
+         $data['total_transaction_by_user'] = User::all()->sum('ammount');
+         $data['total_reffered_bonus'] = Reffered::all()->sum('reffered_bonus');
+         $data['total_earn_by_transfer'] = Transaction::all()->sum('transfer_charge');
+
+//        session()->put('admin_detail',[
+//            "total_user"=>$total_registered_user,
+//            "total_transected_ammount"=>$total_transaction_by_user,
+//            "total_earn_by_transfer"=>$total_earn_by_transfer,
+//            "total_reffered_bonus"=>$total_reffered_bonus
+//        ]);
+        return view('admin.admin_main_content', $data);
+
+    }
+
+    public function all_user_balance()
+    {
+         $all_user_balance = User::all();
+        return view('admin.all_user_balance',['all_user_balance'=>$all_user_balance]);
     }
 
     public function admin_logout()
@@ -59,16 +83,16 @@ class AdminController extends Controller
     {
         $permission = adminSupport::all();
         return view('admin.manage_permission',['permission'=>$permission]);
-        
+
     }
 
     public function edit_permission($id)
     {
-       
+
         $edit_permission = adminSupport::where('id',$id)->first();
         return view('admin.edit_permission',['edit_permission'=>$edit_permission]);
         // return view('admin.edit_permission');
-        
+
     }
 
     public function update_permission(Request $request)
@@ -78,17 +102,19 @@ class AdminController extends Controller
         $update_support->currency_name = $request->currency_name;
         $update_support->reffered_bouns_ammount = $request->reffered_bouns_ammount;
         $update_support->signup_bonus = $request->signup_bonus;
-        $update_support->interest_ammount = $request->interest_ammount;
         $update_support->save();
-    
-        return redirect()->route('managePermission')->with('success_message', 'data updated succesfully');
+        Session::forget('currency');
+        session()->put('currency', $request->currency_name);
+
+        return redirect()->route('managePermission')->with('success_message', 'Data Updated Succesfully');
         }
 
         public function all_user()
         {
               $all_user = User::all();
+             // return view('admin.manage_user');
              return view('admin.manage_user',['all_user'=>$all_user]);
-        
+
         }
 
         public function edit_user($id)
@@ -105,7 +131,7 @@ class AdminController extends Controller
         $update_user->username = $request->username;
         $update_user->email = $request->email;
         $update_user->save();
-    
+
         return redirect()->route('allUser')->with('success_message', 'data updated succesfully');
         }
 }

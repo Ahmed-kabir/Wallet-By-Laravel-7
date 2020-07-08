@@ -28,6 +28,13 @@ class Transaction extends Model
         'email_verified_at' => 'datetime',
     ];
 
+//    protected $appends = ['count'];
+
+//    public function getCountAttribute()
+//    {
+//        return $this;
+//    }
+
      public function user()
     {
         return $this->belongsTo('App\User');
@@ -47,4 +54,11 @@ class Transaction extends Model
     {
          return $this->belongsTo('App\User', 'transferred_user_id');
     }
+
+     public function referedBenifitiarName()
+    {
+        return $this->belongsTo('App\User', 'reffered_id');
+    }
+
+
 }

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>User Login</title>
+    <title>Reset Password</title>
   </head>
   <body>
 					<!-- Default form login -->
@@ -16,34 +16,24 @@
 <div class="container h-100 d-flex justify-content-center">
     <div class="jumbotron my-auto">
     
-      <form class="text-center border border-light p-5" action="{{route('checkUser')}}" method="post">
+      <form class="text-center border border-light p-5" action="{{route('updateForgotPassword')}}" method="post">
     @csrf
                 <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>
                 <h3 class="text-danger text-center">{{Session::get('error_message')}}</h3>
-    <p class="h4 mb-4">Sign in</p>
+    <p class="h4 mb-4">Reset Password</p>
 
     <!-- Email -->
-    <input type="text" id="defaultLoginFormEmail" name="username" class="form-control mb-4" placeholder="User Name">
+    <input type="Password" id="defaultLoginFormEmail" name="password" class="form-control mb-4" placeholder="Enter Password">
+    <input type="hidden" id="defaultLoginFormEmail" name="user_id" class="form-control mb-4" value="{{$user_id}}">
+    <input type="Password" id="defaultLoginFormEmail" name="retype_password" class="form-control mb-4" placeholder="Retype Password">
 
     <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" name="password" class="form-control mb-4" placeholder="Password">
+    
 
-    <div class="d-flex justify-content-around">
-        <div>
-            <!-- Remember me -->
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                <!-- <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label> -->
-            </div>
-        </div>
-        <div>
-            <!-- Forgot password -->
-             Forgot password?  <a href="{{route('forgotPassword')}}">Click Here</a>
-        </div>
-    </div>
+    
 
     <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+    <button class="btn btn-info btn-block my-4" type="submit">Update Password</button>
 
     <!-- Register -->
     <p>Not a member?

@@ -11,10 +11,10 @@
     <title>User Dashboard</title>
   </head>
   <body>
-    
-	
+
+
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Wallet</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            <a class="navbar-brand" href="{{route('userDashboard')}}">Wallet</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
             ><!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -36,93 +36,95 @@
                 </li>
             </ul>
         </nav>
-		
-		
+
+
 		<div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    
+
                     <div class="sb-sidenav-footer container-fluid">
-                        <h3><div class="small">Welcome To {{ Auth::user()->name }}</div></h3>
-                        
+{{--                        <h3><div class="small">Welcome To {{ Auth::user()->name }}</div></h3>--}}
+
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4 text-center">Dashboard</h1>
-                        
+{{--                        <h1 class="mt-4 text-center">Dashboard</h1>--}}
+                        <h1 class="mt-4 text-center"></h1>
+
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Your Current Balance is {{ Auth::user()->ammount }}</div>
+                                    <div class="card-body">Your Current Balance is {{ Auth::user()->ammount }} {{Session::get('currency')}}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Your Reffered Balance</div>
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">Last Transaction :  {{session('user_detail.last_transaction_time') }}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
+                                    <div class="card-body">Last Transacated Ammount : {{session('user_detail.last_transaction_ammount')}} {{Session::get('currency')}}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
+                                <div class="card bg-secondary text-white mb-4">
+                                    <div class="card-body">Total Transaction : {{session('user_detail.total_transaction_by_user')}}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
+
 
 
 <div class="container-fluid ">
     <div class="row">
         <div class="col-md-2">
             <ul class="nav nav-sidebar alert-heading">
-                
+
                 <!-- <li><a href="#">Reports</a></li> -->
-                <a href="{{route('transactionHistory')}}" class="btn btn-warning btn-block" role="button">Transaction History</a>
-                <a href="{{route('sendMoney')}}" class="btn btn-info btn-block" role="button">Send Money</a>
+                <a href="{{route('transactionHistory')}}" class="btn btn-info btn-block" role="button">Transaction History</a>
+                <a href="{{route('sendMoney')}}" class="btn btn-secondary btn-block" role="button">Send Money</a>
                 <a href="{{route('refferedBalance')}}" class="btn btn-success btn-block" role="button">Reffered Balance</a>
                 <a href="{{route('getRefferedLink',Auth::user()->user_unique_id)}}" class="btn btn-primary btn-block" role="button">Get Reffered Link</a>
                 <a href="{{route('manageProfile')}}" class="btn btn-info btn-block" role="button">Manage Profile</a>
                 <a href="#" class="btn btn-success btn-block" role="button">Link Button</a>
                 <a href="#" class="btn btn-info btn-block" role="button">Link Button</a>
-                
-               
+
+
             </ul>
         </div>
-        
+
 <!-- main_content -->
         @yield('main')
         <!-- end_main_content -->
-        
+
     </div>
 
 
 </div>
 
 
-                        
+
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -139,8 +141,8 @@
                 </footer>
             </div>
         </div>
-	
-	
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -9,6 +9,7 @@
       <input type="text" class="form-control" name="currency_name" value="{{$edit_permission->currency_name}}" placeholder="Currency Name">
     </div>
   </div>
+
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Transfer Charge:</label>
     <div class="col-sm-6">
@@ -31,17 +32,12 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Interest Ammount %:</label>
-    <div class="col-sm-6">
-      <input type="number" class="form-control" name="interest_ammount" value="{{$edit_permission->interest_ammount}}" placeholder="Interest Ammount %" min="0" max="50">
-    </div>
-  </div>
 
-  
+
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-     
+
       <button class="btn btn-primary" type="submit">Submit</button>
     </div>
   </div>

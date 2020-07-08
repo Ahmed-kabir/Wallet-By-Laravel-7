@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d396684-07a3-4d21-8414-46b96e073e14" name="Default Changelist" comment="" />
+    <list default="true" id="6d396684-07a3-4d21-8414-46b96e073e14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/all_user_balance.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/TransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/TransactionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Reffered.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Reffered.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/admin_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/admin_main_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_main_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/all_transaction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/all_transaction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/edit_permission.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/edit_permission.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/manage_permission.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_permission.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/manage_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/transaction_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/transaction_by_id.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/reffered_history_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/reffered_history_by_id.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/transaction_history_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/transaction_history_by_id.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_main_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_main_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1eCv6p1CW1fODqYcD4gEl6BzXas" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -21,6 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,16 +79,36 @@
       <option name="presentableId" value="Default" />
       <updated>1593838216689</updated>
       <workItem from="1593838221479" duration="1262000" />
+      <workItem from="1594184095044" duration="26444000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1593838996273">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594205880840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1593838996273" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1594205880840" />
+    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1594208869889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1594208869889" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1594189989340">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1594189989340" />
   </component>
 </project>
