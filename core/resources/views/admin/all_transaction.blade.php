@@ -30,24 +30,14 @@
 
 
                                         <tbody>
-                                        @foreach ($allTransaction as $row)
+                                        @foreach ($all_transaction as $row)
                                       <tr>
                                         <td>
                                             <a href="{{route('transactionById',$row->senderName->id)}}">{{ $row->senderName->name }}</a>
                                         </td>
-                                        <!-- <td>{{ $row->senderName->name }}</td> -->
                                         <td>{{ $row->transfer_ammount }} {{Session::get('currency')}}</td>
                                         <td>{{ $row->transfer_charge }} {{Session::get('currency')}}</td>
 
-
-                                      <!--   <td>
-                                          @if(empty($row->receiverName))
-                                            <span>No data found!!</span>
-                                            @else
-                                            {{ $row->receiverName->name }}
-
-                                            @endif
-                                        </td> -->
                                             <td>
                                           @if(empty($row->receiverName))
                                             <span>No data found!!</span>

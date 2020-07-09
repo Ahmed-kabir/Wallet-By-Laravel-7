@@ -37,7 +37,7 @@ class UserController extends Controller
           $token = Str::random(12);
 
         $request->validate([
-            "email"=>'required'
+            "email"=>'required|email'
             ]);
 
         $email = $request->input('email');
@@ -80,7 +80,13 @@ class UserController extends Controller
     }
     public function update_forgot_password(Request $request)
     {
-        // return $request->all();
+
+        $request->validate([
+            "token"=>'required',
+            "password"=>'required',
+            "retype_password"=>'required'
+        ]);
+
         $user_id = $request->input('user_id');
         $password = $request->input('password');
         $retype_password = $request->input('retype_password');
@@ -231,10 +237,8 @@ class UserController extends Controller
 
     public function manage_profile()
     {
-        $user_id = Auth::user()->id;
-        $user_profile = User::where('id', $user_id)->first();
-        $data['user_profile'] = $user_profile;
-        return view('user.user_profile', $data);
+
+        return view('user.user_profile');
     }
 
     public function edit_profile()
@@ -393,7 +397,7 @@ class UserController extends Controller
         }
         else
         {
-            return redirect()->route('userLogin')->with('error_message', 'Something Wrong');
+            return redirect()->route('userLogin')->with('error_message', 'Username/Password Is Incorrect');
         }
     }
 
@@ -401,7 +405,7 @@ class UserController extends Controller
     {
          Auth::logout();
 
-        return redirect()->route('userLogin');
+        return redirect()->route('home');
     }
 
     public function user_send_money()
@@ -411,6 +415,11 @@ class UserController extends Controller
 
     public function transfer_money(Request $request)
     {
+        $request->validate([
+            "user_id"=>'required|integer',
+            "transfer_ammount"=>'required|integer|min:3'
+        ]);
+
         $settings = adminSupport::first();
         $transfer_fixed_charge = $settings->transfer_charge;
         $transfer_percentige_charge = $settings->transfer_percentige_charge;

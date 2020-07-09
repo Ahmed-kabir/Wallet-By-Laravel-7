@@ -12,7 +12,7 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Total No Of Registered User : {{ $total_registered_user }}</div>
+                                    <div class="card-body">Total No Of Registered User : {{ count($users) }}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="{{route('allUser')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">Total Balance Of System : {{ $total_transaction_by_user }} {{Session::get('currency')}}</div>
+                                    <div class="card-body">Total Balance Of System : {{ $users->sum('ammount') }} {{Session::get('currency')}}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="{{route('usersTotalBalance')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>

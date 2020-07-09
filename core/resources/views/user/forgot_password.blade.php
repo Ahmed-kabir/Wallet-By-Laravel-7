@@ -15,7 +15,7 @@
 <!-- Default form login -->
 <div class="container h-100 d-flex justify-content-center">
     <div class="jumbotron my-auto">
-    
+
       <form class="text-center border border-light p-5" action="{{route('checkForgotPassword')}}" method="post">
     @csrf
                 <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>
@@ -26,9 +26,17 @@
     <input type="Email" id="defaultLoginFormEmail" name="email" class="form-control mb-4" placeholder="Enter Email Address">
 
     <!-- Password -->
-    
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+      @endif
 
-    
+
 
     <!-- Sign in button -->
     <button class="btn btn-info btn-block my-4" type="submit">Reset Password</button>
@@ -39,7 +47,7 @@
     </p>
 
     <!-- Social login -->
-  
+
 
 </form>
     </div>
@@ -60,7 +68,7 @@
 
 
 <div class="row  h-100 row align-items-center">
-  
-  
+
+
 
 </div>

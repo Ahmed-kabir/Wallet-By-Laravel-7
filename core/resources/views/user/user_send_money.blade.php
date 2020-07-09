@@ -6,7 +6,15 @@
                 <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>
                 <h3 class="text-danger text-center">{{Session::get('error_message')}}</h3>
     <p class="h4 mb-4">Send Money</p>
-
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 <div class="form-row mb-4">
         <div class="col">
             <!-- First name -->
@@ -21,6 +29,7 @@
     </div>
 
 
+
     <div class="d-flex justify-content-around">
         <div>
             <!-- Remember me -->
@@ -29,13 +38,13 @@
                 <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label> -->
             </div>
         </div>
-       
+
     </div>
 
     <!-- Sign in button -->
     <button class="btn btn-info btn-block my-4" type="submit">Send Money</button>
 
-  
+
 
 </form>
 <!-- Default form login -->

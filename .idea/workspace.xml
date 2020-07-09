@@ -20,28 +20,137 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d396684-07a3-4d21-8414-46b96e073e14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.idea/wallet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/.styleci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/InterestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/RefferedController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/TransactionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/adminDashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/adminStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/userDashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Http/Middleware/userStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Interest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Reffered.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app/adminSupport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_04_045346_create_admins_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_04_083929_create_admin_supports_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_04_085153_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_04_132054_create_reffereds_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_04_132359_create_transactions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/migrations/2020_07_07_050147_create_interests_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/seeds/admnTableDataSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/sass/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_main_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/all_interest.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/all_reffered.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/all_transaction.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/core/resources/views/admin/all_user_balance.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/data_table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/edit_permission.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/edit_user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/give_interest.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_permission.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/transaction_by_id.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/admin/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/forgot_password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/reffered_history_by_id.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/reset_password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/reset_password_by_token.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/transaction_history_by_id.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_invitation_link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_main_content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_registerd_by_reffered.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/user/user_send_money.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/TransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/TransactionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Reffered.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Reffered.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Transaction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/admin_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/admin_main_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/admin_main_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/all_transaction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/all_transaction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/edit_permission.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/edit_permission.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/manage_permission.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_permission.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/manage_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/manage_user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/admin/transaction_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/admin/transaction_by_id.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/reffered_history_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/reffered_history_by_id.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/transaction_history_by_id.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/transaction_history_by_id.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_main_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_main_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/resources/views/user/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/user/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +162,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/core" />
   </component>
   <component name="ProjectId" id="1eCv6p1CW1fODqYcD4gEl6BzXas" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,7 +188,13 @@
       <option name="presentableId" value="Default" />
       <updated>1593838216689</updated>
       <workItem from="1593838221479" duration="1262000" />
-      <workItem from="1594184095044" duration="26444000" />
+      <workItem from="1594184095044" duration="29061000" />
+      <workItem from="1594270323495" duration="129000" />
+      <workItem from="1594270469975" duration="85000" />
+      <workItem from="1594270777906" duration="25000" />
+      <workItem from="1594271832722" duration="9000" />
+      <workItem from="1594277467799" duration="10179000" />
+      <workItem from="1594300699862" duration="1136000" />
     </task>
     <servers />
   </component>
@@ -96,12 +211,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594205880840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1594205880840" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594288879677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1594288879677" />
     <state x="795" y="443" key="NewPhpFileDialog" timestamp="1594208869889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

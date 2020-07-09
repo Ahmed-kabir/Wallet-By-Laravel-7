@@ -15,13 +15,21 @@
 <!-- Default form login -->
 <div class="container h-100 d-flex justify-content-center">
     <div class="jumbotron my-auto">
-    
+
       <form class="text-center border border-light p-5" action="{{route('checkUser')}}" method="post">
     @csrf
                 <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>
                 <h3 class="text-danger text-center">{{Session::get('error_message')}}</h3>
     <p class="h4 mb-4">Sign in</p>
-
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+      @endif
     <!-- Email -->
     <input type="text" id="defaultLoginFormEmail" name="username" class="form-control mb-4" placeholder="User Name">
 
@@ -51,7 +59,7 @@
     </p>
 
     <!-- Social login -->
-  
+
 
 </form>
     </div>
@@ -72,7 +80,7 @@
 
 
 <div class="row  h-100 row align-items-center">
-  
-  
+
+
 
 </div>

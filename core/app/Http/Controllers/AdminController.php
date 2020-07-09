@@ -41,19 +41,25 @@ class AdminController extends Controller
         }
         else
         {
-            return redirect()->route('adminLogin')->with('error_message', 'Something Wrong');
+            return redirect()->route('adminLogin')->with('error_message', 'Username/Password Is Incorrect');
         }
     }
 
     public function admin_dashboard()
     {
+//
+//        $trx = Transaction::all();
+//        $data = $trx->groupBy('user_id')->map(function ($item){
+//            return collect($item);
+//        });
+//        dd($data);
+
 
         $settings = adminSupport::first();
         $currency = $settings->currency_name;
         session()->put('currency', $currency);
 
-         $data['total_registered_user'] = User::get()->count();
-         $data['total_transaction_by_user'] = User::all()->sum('ammount');
+         $data['users'] = User::all();
          $data['total_reffered_bonus'] = Reffered::all()->sum('reffered_bonus');
          $data['total_earn_by_transfer'] = Transaction::all()->sum('transfer_charge');
 
@@ -63,7 +69,7 @@ class AdminController extends Controller
 //            "total_earn_by_transfer"=>$total_earn_by_transfer,
 //            "total_reffered_bonus"=>$total_reffered_bonus
 //        ]);
-        return view('admin.admin_main_content', $data);
+        return view('admin.admin_main_content')->with($data);
 
     }
 
@@ -76,7 +82,7 @@ class AdminController extends Controller
     public function admin_logout()
     {
          Auth::guard('admin')->logout();
-        return redirect()->route('adminLogin');
+        return redirect()->route('home');
     }
 
     public function manage_permission()
@@ -126,6 +132,11 @@ class AdminController extends Controller
         public function update_user(Request $request)
         {
             // return $request->all();
+            $request->validate([
+                "name"=>'required',
+                "username"=>'required',
+                "email"=>'required'
+            ]);
         $update_user=User::find($request->id);
         $update_user->name = $request->name;
         $update_user->username = $request->username;

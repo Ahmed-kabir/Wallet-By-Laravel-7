@@ -11,6 +11,7 @@ use App\Reffered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination;
 use Hash;
+use function GuzzleHttp\Promise\all;
 
 
 class TransactionController extends Controller
@@ -23,7 +24,7 @@ class TransactionController extends Controller
     public function transaction_history()
     {
           $sender_id = Auth::user()->id;
-            $transaction_by_id =Transaction::where('user_id',$sender_id)->orderBy('id', 'desc')->paginate(4);
+            $transaction_by_id =Transaction::with('transferedUser')->where('user_id',$sender_id)->orderBy('id', 'desc')->paginate(4);
           return view('user.transaction_history_by_id', ['transactionById'=>$transaction_by_id]);
           // echo '<pre>';
           // printf($transaction_by_id);
@@ -33,20 +34,20 @@ class TransactionController extends Controller
     public function reffered_history()
     {
         $user_id = Auth::user()->id;
-        $reffered_by_id =Reffered::where('reffered_id',$user_id)->orderBy('id', 'desc')->paginate(4);
+        $reffered_by_id =Reffered::with('user')->where('reffered_id',$user_id)->orderBy('id', 'desc')->paginate(4);
           return view('user.reffered_history_by_id', ['refferedById'=>$reffered_by_id]);
     }
 
     public function show_reffered_history()
     {
-         $all_reffered = Reffered::all();
+         $all_reffered = Reffered::with('user')->get();
         return view('admin.all_reffered', ['all_reffered'=>$all_reffered]);
     }
     public function all_transaction()
     {
-        $all_transaction = Transaction::all();
+        $all_transaction = Transaction::with('senderName', 'receiverName')->get();
         // return view('admin.all_transaction');
-        return view('admin.all_transaction', ['allTransaction'=>$all_transaction]);
+        return view('admin.all_transaction', compact('all_transaction'));
         // return view('admin.data_table');
     }
     public function total_transfer_charge()
@@ -77,6 +78,11 @@ class TransactionController extends Controller
     public function give_interest_to_alluser(Request $request)
     {
         // return $request->all();
+        $request->validate([
+            "percentage"=>'required',
+
+        ]);
+
         $int_percentage_value = $request->input('percentage');
         $interest_percentige_value = $int_percentage_value/100;
          $users = User::all();

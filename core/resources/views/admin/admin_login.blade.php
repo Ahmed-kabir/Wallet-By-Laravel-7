@@ -19,6 +19,15 @@
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Admin Login</h3></div>
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <h3 class="text-success text-center">{{Session::get('success_message')}}</h3>
                                     <h3 class="text-danger text-center">{{Session::get('error_message')}}</h3>
                                     <div class="card-body">
@@ -32,10 +41,10 @@
                                                 <label class="small mb-1" for="inputPassword">Password</label>
                                                 <input class="form-control py-4" id="inputPassword" name="password" type="password" placeholder="Enter password" />
                                             </div>
-                                            
+
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.html">Forgot Password?</a>
-                                            
+
                                                  <button class="btn btn-primary" type="submit">Login</button>
                                             </div>
                                         </form>
@@ -67,6 +76,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('assets/admin/js/scripts.js')}}"></script>
-      
+
     </body>
 </html>

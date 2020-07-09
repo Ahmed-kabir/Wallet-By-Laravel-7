@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('user.user_login');
-});
+    return view('welcome');
+})->name('home');
+
 
 Route::prefix('admin')->group(function(){
 Route::get('/login', 'AdminController@login')->name('adminLogin')->middleware('adminStatus');
